@@ -1,0 +1,191 @@
+/* Скидання відступів та кольору тексту */
+* {
+    padding: 0;
+    margin: 0;
+    color: var(--basic-color);
+    scroll-behavior: smooth; /* Плавне прокручування */
+}
+
+/* Задаємо змінні кольорів для подальшого використання */
+:root {
+    --nav-color: rgb(230, 94, 230); /* Колір для навігаційних посилань при наведенні */
+    --nav2-color: skyblue; /* Колір фону для соціальних іконок */
+    --basic-color: white; /* Основний колір тексту */
+    --tema-color: #0e101c; /* Основний колір фону */
+    --tema2-color: #ad27eb; /* Додатковий колір для теми */
+}
+
+/* Стилі для тіла сторінки */
+body {
+    background-color: var(--tema-color);
+    height: 100%;
+    min-height: 100vh;
+}
+
+/* Стилі для зображень у заголовку */
+#header-img {
+    width: 50px;
+    margin: 5px;
+    background-color: var(--tema-color);
+}
+
+/* Стилі для заголовка та навігаційної панелі */
+#header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    z-index: 1; /* Перекриття інших елементів */
+}
+
+#nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#nav-bar a {
+    margin: 4px 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.nav-link {
+    top: 7px;
+    position: relative;
+}
+
+.nav-st-2 {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    position: relative;
+    background-color: var(--nav2-color);
+}
+
+.nav-st-2 i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Стилі для основного сектора */
+#main {
+    background-image: url("https://i.ibb.co/tMrtHY8/202407311119556.png");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Стилі для сектора про подію */
+#about {
+    padding-top: 180px; /* Відступ від верху для урахування фіксованого заголовка */
+    padding-bottom: 50px;
+}
+
+.margin-items, .items > * {
+    margin: 10px 0 10px 20px;
+}
+
+h1 {
+    font-size: 60px;
+    width: clamp(200px, 50vw, 1000px); /* Розмір заголовка з адаптивною шириною */
+}
+
+#about p {
+    font-size: 18px;
+    width: clamp(200px, 50vw, 1000px);
+}
+
+/* Стилі для форм та кнопок */
+#email, #submit, .items button {
+    display: block;
+    background-color: transparent;
+    border: 2px solid var(--basic-color);
+    padding: 5px;
+}
+
+/* Стилі для секцій з особливостями та цінами */
+#features, #pricing {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#features article {
+    min-width: 200px;
+    margin: 20px;
+}
+
+#features article img {
+    width: 70px;
+    float: left;
+    margin: 0 10px;
+}
+
+video {
+    min-width: 200px;
+    min-height: 112px;
+    width: 50vw;
+    height: 28vw;
+    margin: 50px 24vw;
+}
+
+#features article p {
+    color: gray;
+}
+
+#pricing {
+    justify-content: center;
+}
+
+.items {
+    margin: 0 2vw;
+    width: 28vw;
+    min-width: 200px;
+}
+
+.items img {
+    width: 60%;
+}
+
+/* Стилі для підвалу сайту */
+footer {
+    margin-top: 50px;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+footer nav a{
+    margin: 0 15px;
+}
+
+/* Стилі для навігаційних посилань при наведенні та активації */
+@media (hover:hover) {
+    .nav-link:hover {
+        color: var(--nav-color);
+    }
+    .nav-st-2:hover {
+        background-color: var(--nav2-color);
+        opacity: 0.8;
+    }
+    #submit:hover {
+        color: var(--nav2-color);
+        border-color: var(--nav2-color);
+    }
+}
+
+@media (hover:none) {
+    .nav-link:active {
+        color: var(--nav-color);
+    }
+    .nav-st-2:active {
+        background-color: var(--nav2-color);
+        opacity: 0.8;
+    }
+    #submit:active {
+        color: var(--nav2-color);
+        border-color: var(--nav2-color);
+    }
+}
