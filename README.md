@@ -1,5 +1,5 @@
 # ProductLandingPage
-<img src="https://github.com/OleksandrHub/SurveyForm/blob/main/pr-1.PNG?raw=true" alt="project screen" width="60%" align="center">
+<img src="https://github.com/OleksandrHub/ProductLandingPage/blob/main/pr-4.PNG?raw=true" alt="project screen" width="60%" align="center">
 **Description for the fourth site (Product Landing Page):**
 
 **Project:** Promo page for a product.
